@@ -12,7 +12,7 @@
             box-sizing: border-box;
         }
         body{
-            overflow: none;
+            overflow: hidden;
             margin: 0;padding: 0;
             background-image: url(static/images/app-bg.jpg);
             background-size: cover;
@@ -113,6 +113,46 @@
         #links li:hover::after{
             width: 100%;
         }
+        .alertbox{
+            border: 1px solid white;
+            width: 30%;
+            opacity: 0;
+           padding-left: 10px;
+           background-color: #fff;
+           color: grey;
+           border-radius: .5vw;
+           position: absolute;
+           bottom: 10%;
+           
+           right: 1%;
+           transition: all 1s ease;
+           transform: translateX(120%);
+        }
+        #close
+        {
+            position: absolute;
+            right: -1%;
+            top: -50%;
+            font-size: 2em;
+            cursor: pointer;
+            transform: rotate(45deg);
+            color: white;
+            display: flex;align-items: center;justify-content: center;
+            background-color: grey;
+            border-radius: 50%;
+            width: 2vw;
+            height: 2vw;
+        }
+       
+        #box{
+            position: relative;
+        }
+        .show
+        {
+            transform: translateX(0);
+            opacity: 100%;
+        }
+
     </style>
 
     <div id="nav-bar">
@@ -146,5 +186,26 @@
             perfect for resumes, invoices, reports, and more.</p>
             <a href="./templates/editor.html">Create Now</a>
     </div>
+    <div class="alertbox">
+        <div id="box">
+            <p>
+                This converter fully supports Bootstrap 5. Use Bootstrap elements and layout to generate responsive, styled PDFs.
+            </p>
+            <div id="close" onclick="removeMSG()">+</div>
+        </div>
+    </div>
+
+    <script>
+        function removeMSG()
+        {
+            var box=document.getElementsByClassName("alertbox")[0];
+            box.style.display="none";
+        }
+        window.onload=function()
+        {
+            var alertbox=document.querySelector(".alertbox");
+            alertbox.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
