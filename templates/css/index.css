@@ -71,6 +71,9 @@ button{
     border: none;
     cursor: pointer;
 }
+*{
+    outline: none;
+}
 .container::after{
     width: 5%;
     height: 5%;
