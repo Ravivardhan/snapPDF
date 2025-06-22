@@ -1,6 +1,7 @@
 var boilerplate = `<!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="templates/css/sheet.css">
   <title>My HTML Page</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; }
