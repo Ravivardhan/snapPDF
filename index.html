@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="templates/css/index.css">
+    <script src="templates/js/index.js" defer></script>
+    <title>snapPDF</title>
+</head>
+<body>
+    <h1>Snap PDF</h1>
+    <div class="container">
+            <div class="editor">
+                <!-- <textarea id="codeEditor" > -->
+                    <textarea oninput="render()" name="codeEditor" id="">
+                        
+                    </textarea>
+                    <button onclick="exportToPDF()" id="render">Generate PDF</button>
+            </div>
+      
+        <iframe src="" frameborder="0"></iframe>
+
+    </div>
+</body>
+</html>
