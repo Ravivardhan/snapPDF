@@ -6,19 +6,20 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="templates/css/index.css">
-    <script src="templates/js/index.js" defer></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+
     <title>snapPDF</title>
 </head>
 <body>
-    <h1>Snap PDF</h1>
+    <h2>Editor</h2>
     <div class="container">
             <div class="editor">
                 <!-- <textarea id="codeEditor" > -->
                     <textarea oninput="render()" name="codeEditor" id="">
                         
                     </textarea>
-                    <button onclick="exportToPDF()" id="render">Generate PDF</button>
+                    <button onclick="exportToPDF()" id="render">Export PDF</button>
             </div>
       
         <iframe src="" frameborder="0"></iframe>

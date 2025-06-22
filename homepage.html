@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snapPDF</title>
+</head>
+<body>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            overflow: none;
+            margin: 0;padding: 0;
+            background-image: url(static/images/app-bg.jpg);
+            background-size: cover;
+            width: 100vw;
+            box-shadow: inset 0px 0px 100px black;
+            height: 100vh;
+            display: flex;align-items: center;justify-content: space-between;
+            flex-direction: column;
+        }
+        #nav-bar
+        {
+            width: 100%;
+            
+        }
+        ul
+        {
+            list-style: none;
+
+            display: flex;
+            align-items: center;justify-content: start;
+            font-size: 1.3em;
+            margin: 0px;
+            padding-left: 3vw;
+            color: white;
+        }
+        li{
+            width: fit-content;
+        }
+        img{
+            max-width: 3vw;
+        }
+        .container{
+            position: absolute;
+            top: 40%;
+            color: white;
+            left: 5%;
+            width: 45%;
+        }
+        .container h1{
+            font-size: 3em;
+        }
+        p{
+            width: 70%;
+        }
+        span{
+            color: red;
+        }
+        a
+        {
+            padding: 10px 20px ;
+            border-radius: 3vw;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            font-size: 1.1em;
+            transition: 1s ease;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            transform: scale(1.2);
+            box-shadow: 0px 0px 30px black;
+            color: red;
+            background-color: #fff;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #links
+        {
+            display: flex;
+            gap: 1vw;
+            padding: 2vw;
+        }
+        #links li{
+            margin: 10px 20px;
+            transition: 1s ease;
+            border-radius: .5vw;
+            position: relative;
+            padding-bottom: 1vh;
+            cursor: pointer;
+        }
+      
+        #links li::after
+        {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 5%;
+            transition: .5s ease;
+            background-color: red;
+            bottom: 0;
+            left: 0;
+        }
+        #links li:hover::after{
+            width: 100%;
+        }
+    </style>
+
+    <div id="nav-bar">
+        <nav>
+            <ul>
+                <li>
+                    <img src="static/images/appicon.png" alt="">
+                </li>
+                <li>
+                    <h1>snapPDF</h1>
+                </li>
+                
+            </ul>
+            <ul id="links">
+                <li>
+                    Templates
+                </li>
+                <li>
+                    Documentation
+                </li>
+                <li>
+                    Contact US
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>SnapPDF – Instantly Convert <span>HTML</span> to <span>PDF</span></h1>
+        <p>Create high-quality PDF documents from your HTML content with just one click. 
+            SnapPDF supports custom styles, multi-page layouts, and manual page breaks – 
+            perfect for resumes, invoices, reports, and more.</p>
+            <a href="./templates/index.html">Create Now</a>
+    </div>
+</body>
+</html>

@@ -42,5 +42,5 @@ async function exportToPDF() {
     const imgHeight = imgProps.height * ratio;
 
     pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-    pdf.save('iframe-content.pdf'); // 🚀 Auto-downloads in browser
+    pdf.save('iframe-content.pdf'); 
   }
